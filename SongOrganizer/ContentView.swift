@@ -18,12 +18,12 @@ struct ContentView: View {
                 }
             FavoritesList()
                 .tabItem {
-                    Image(systemName: "airplane")
+                    Image(systemName: "star.fill")
                     Text("Favorites")
                 }
             RecordingsList()
                 .tabItem {
-                    Image(systemName: "magnifyingglass")
+                    Image(systemName: "mic.fill")
                     Text("Recordings")
                 }
             SearchDB()
@@ -33,7 +33,7 @@ struct ContentView: View {
                 }
             SearchAPI()
                 .tabItem {
-                    Image(systemName: "magnifyingglass")
+                    Image(systemName: "magnifyingglass.circle")
                     Text("Search API")
                 }
         }   // End of TabView

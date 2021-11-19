@@ -22,6 +22,7 @@
 		BFE2D2352747332A0083D7E6 /* SearchDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D2342747332A0083D7E6 /* SearchDB.swift */; };
 		BFE2D2372747333E0083D7E6 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D2362747333E0083D7E6 /* SearchAPI.swift */; };
 		BFE2D2392747339C0083D7E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D2382747339C0083D7E6 /* AppDelegate.swift */; };
+		BFE2D23B2747353C0083D7E6 /* SearchResultsEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D23A2747353C0083D7E6 /* SearchResultsEmpty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		BFE2D2342747332A0083D7E6 /* SearchDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDB.swift; sourceTree = "<group>"; };
 		BFE2D2362747333E0083D7E6 /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
 		BFE2D2382747339C0083D7E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFE2D23A2747353C0083D7E6 /* SearchResultsEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsEmpty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		BFE2D21F274731230083D7E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFE2D23A2747353C0083D7E6 /* SearchResultsEmpty.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE2D23B2747353C0083D7E6 /* SearchResultsEmpty.swift in Sources */,
 				BFE2D231274732FA0083D7E6 /* RecordingsList.swift in Sources */,
 				BFE2D22B274732B70083D7E6 /* FavoritesList.swift in Sources */,
 				BFE2D2372747333E0083D7E6 /* SearchAPI.swift in Sources */,
