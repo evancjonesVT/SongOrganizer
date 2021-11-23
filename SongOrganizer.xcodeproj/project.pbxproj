@@ -24,6 +24,7 @@
 		BFE2D2392747339C0083D7E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D2382747339C0083D7E6 /* AppDelegate.swift */; };
 		BFE2D23B2747353C0083D7E6 /* SearchResultsEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D23A2747353C0083D7E6 /* SearchResultsEmpty.swift */; };
 		BFE2D23D274D50B60083D7E6 /* SongData.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE2D23C274D50B60083D7E6 /* SongData.json */; };
+		BFE2D23F274D59EC0083D7E6 /* SongStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D23E274D59EC0083D7E6 /* SongStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		BFE2D2382747339C0083D7E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE2D23A2747353C0083D7E6 /* SearchResultsEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsEmpty.swift; sourceTree = "<group>"; };
 		BFE2D23C274D50B60083D7E6 /* SongData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SongData.json; sourceTree = "<group>"; };
+		BFE2D23E274D59EC0083D7E6 /* SongStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE2D23C274D50B60083D7E6 /* SongData.json */,
+				BFE2D23E274D59EC0083D7E6 /* SongStruct.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				BFE2D2372747333E0083D7E6 /* SearchAPI.swift in Sources */,
 				BFD98E1F2743147500A75D21 /* Persistence.swift in Sources */,
 				BFE2D22F274732E60083D7E6 /* FavoritesDetails.swift in Sources */,
+				BFE2D23F274D59EC0083D7E6 /* SongStruct.swift in Sources */,
 				BFE2D2352747332A0083D7E6 /* SearchDB.swift in Sources */,
 				BFE2D233274733080083D7E6 /* RecordingsItem.swift in Sources */,
 				BFD98E182743147100A75D21 /* ContentView.swift in Sources */,
