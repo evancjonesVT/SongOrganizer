@@ -24,7 +24,11 @@
 		BFE2D2392747339C0083D7E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D2382747339C0083D7E6 /* AppDelegate.swift */; };
 		BFE2D23B2747353C0083D7E6 /* SearchResultsEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D23A2747353C0083D7E6 /* SearchResultsEmpty.swift */; };
 		BFE2D23D274D50B60083D7E6 /* SongData.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE2D23C274D50B60083D7E6 /* SongData.json */; };
-		BFE2D23F274D59EC0083D7E6 /* SongStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D23E274D59EC0083D7E6 /* SongStruct.swift */; };
+		BFE2D23F274D59EC0083D7E6 /* MySongStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D23E274D59EC0083D7E6 /* MySongStruct.swift */; };
+		BFE2D241274D5C440083D7E6 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D240274D5C430083D7E6 /* Song.swift */; };
+		BFE2D243274D5C620083D7E6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D242274D5C620083D7E6 /* Album.swift */; };
+		BFE2D245274D5C6E0083D7E6 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D244274D5C6E0083D7E6 /* Artist.swift */; };
+		BFE2D247274D5C780083D7E6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D246274D5C780083D7E6 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +50,11 @@
 		BFE2D2382747339C0083D7E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE2D23A2747353C0083D7E6 /* SearchResultsEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsEmpty.swift; sourceTree = "<group>"; };
 		BFE2D23C274D50B60083D7E6 /* SongData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SongData.json; sourceTree = "<group>"; };
-		BFE2D23E274D59EC0083D7E6 /* SongStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStruct.swift; sourceTree = "<group>"; };
+		BFE2D23E274D59EC0083D7E6 /* MySongStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySongStruct.swift; sourceTree = "<group>"; };
+		BFE2D240274D5C430083D7E6 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		BFE2D242274D5C620083D7E6 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		BFE2D244274D5C6E0083D7E6 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		BFE2D246274D5C780083D7E6 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE2D23C274D50B60083D7E6 /* SongData.json */,
-				BFE2D23E274D59EC0083D7E6 /* SongStruct.swift */,
+				BFE2D23E274D59EC0083D7E6 /* MySongStruct.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -123,6 +131,10 @@
 			children = (
 				BFD98E202743147500A75D21 /* SongOrganizer.xcdatamodeld */,
 				BFD98E1E2743147500A75D21 /* Persistence.swift */,
+				BFE2D244274D5C6E0083D7E6 /* Artist.swift */,
+				BFE2D242274D5C620083D7E6 /* Album.swift */,
+				BFE2D246274D5C780083D7E6 /* Photo.swift */,
+				BFE2D240274D5C430083D7E6 /* Song.swift */,
 			);
 			path = "Core Data Model";
 			sourceTree = "<group>";
@@ -264,15 +276,19 @@
 				BFE2D23B2747353C0083D7E6 /* SearchResultsEmpty.swift in Sources */,
 				BFE2D231274732FA0083D7E6 /* RecordingsList.swift in Sources */,
 				BFE2D22B274732B70083D7E6 /* FavoritesList.swift in Sources */,
+				BFE2D243274D5C620083D7E6 /* Album.swift in Sources */,
 				BFE2D2372747333E0083D7E6 /* SearchAPI.swift in Sources */,
 				BFD98E1F2743147500A75D21 /* Persistence.swift in Sources */,
 				BFE2D22F274732E60083D7E6 /* FavoritesDetails.swift in Sources */,
-				BFE2D23F274D59EC0083D7E6 /* SongStruct.swift in Sources */,
+				BFE2D23F274D59EC0083D7E6 /* MySongStruct.swift in Sources */,
 				BFE2D2352747332A0083D7E6 /* SearchDB.swift in Sources */,
 				BFE2D233274733080083D7E6 /* RecordingsItem.swift in Sources */,
 				BFD98E182743147100A75D21 /* ContentView.swift in Sources */,
 				BFE2D2392747339C0083D7E6 /* AppDelegate.swift in Sources */,
+				BFE2D247274D5C780083D7E6 /* Photo.swift in Sources */,
+				BFE2D245274D5C6E0083D7E6 /* Artist.swift in Sources */,
 				BFE2D229274732A60083D7E6 /* Home.swift in Sources */,
+				BFE2D241274D5C440083D7E6 /* Song.swift in Sources */,
 				BFD98E222743147500A75D21 /* SongOrganizer.xcdatamodeld in Sources */,
 				BFE2D22D274732D20083D7E6 /* FavoritesItem.swift in Sources */,
 				BFD98E162743147100A75D21 /* SongOrganizerApp.swift in Sources */,

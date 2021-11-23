@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Song: Decodable {
+struct MySong: Decodable {
     
     var title: String
     var album: String
