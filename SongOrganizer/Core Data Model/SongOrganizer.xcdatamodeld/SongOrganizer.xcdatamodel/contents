@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Album" representedClassName=".Album" syncable="YES">
+        <attribute name="albumName" optional="YES" attributeType="String"/>
+        <relationship name="artist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Artist" inverseName="album" inverseEntity="Artist"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="album" inverseEntity="Photo"/>
+        <relationship name="song" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Song" inverseName="album" inverseEntity="Song"/>
+    </entity>
+    <entity name="Artist" representedClassName=".Artist" syncable="YES">
+        <attribute name="artistName" optional="YES" attributeType="String"/>
+        <relationship name="album" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Album" inverseName="artist" inverseEntity="Album"/>
+    </entity>
+    <entity name="Photo" representedClassName=".Photo" syncable="YES">
+        <attribute name="albumPhoto" optional="YES" attributeType="Binary"/>
+        <relationship name="album" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="photo" inverseEntity="Album"/>
+    </entity>
+    <entity name="Song" representedClassName=".Song" syncable="YES">
+        <attribute name="appleLink" optional="YES" attributeType="String"/>
+        <attribute name="length" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="songTitle" optional="YES" attributeType="String"/>
+        <attribute name="spotifyLink" optional="YES" attributeType="String"/>
+        <attribute name="youTube" optional="YES" attributeType="String"/>
+        <relationship name="album" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="song" inverseEntity="Album"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Song" positionX="-280.1390991210938" positionY="-195.7645874023438" width="128" height="148"/>
+        <element name="Album" positionX="-288.5192260742188" positionY="-360.0193176269531" width="128" height="103"/>
+        <element name="Artist" positionX="-271.3017578125" positionY="-495.8330993652344" width="128" height="73"/>
+        <element name="Photo" positionX="-40.88916015625" positionY="-344.91357421875" width="128" height="73"/>
     </elements>
 </model>
