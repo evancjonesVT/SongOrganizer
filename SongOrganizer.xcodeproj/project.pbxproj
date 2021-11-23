@@ -23,6 +23,7 @@
 		BFE2D2372747333E0083D7E6 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D2362747333E0083D7E6 /* SearchAPI.swift */; };
 		BFE2D2392747339C0083D7E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D2382747339C0083D7E6 /* AppDelegate.swift */; };
 		BFE2D23B2747353C0083D7E6 /* SearchResultsEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2D23A2747353C0083D7E6 /* SearchResultsEmpty.swift */; };
+		BFE2D23D274D50B60083D7E6 /* SongData.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE2D23C274D50B60083D7E6 /* SongData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		BFE2D2362747333E0083D7E6 /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
 		BFE2D2382747339C0083D7E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE2D23A2747353C0083D7E6 /* SearchResultsEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsEmpty.swift; sourceTree = "<group>"; };
+		BFE2D23C274D50B60083D7E6 /* SongData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SongData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		BFE2D21E274731180083D7E6 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFE2D23C274D50B60083D7E6 /* SongData.json */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				BFD98E1D2743147500A75D21 /* Preview Assets.xcassets in Resources */,
 				BFD98E1A2743147500A75D21 /* Assets.xcassets in Resources */,
+				BFE2D23D274D50B60083D7E6 /* SongData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
