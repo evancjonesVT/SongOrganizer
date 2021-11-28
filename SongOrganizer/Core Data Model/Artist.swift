@@ -21,6 +21,6 @@ import CoreData
 // ❎ CoreData Photo entity public class
 public class Artist: NSManagedObject, Identifiable {
 
-    @NSManaged public var artsitName: String?    // 'Binary Data' type
-    @NSManaged public var album: Album?
+    @NSManaged public var artistName: String?    // 'Binary Data' type
+    @NSManaged public var album: NSSet?
 }

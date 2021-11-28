@@ -29,3 +29,28 @@ public class Song: NSManagedObject, Identifiable {
     @NSManaged public var youtube: String?
     @NSManaged public var album: Album?
 }
+
+
+extension Song {
+    
+    static func allSongsFetchRequest() -> NSFetchRequest<Song> {
+        
+        let fetchRequest = NSFetchRequest<Song>(entityName: "Song")
+        
+        fetchRequest.sortDescriptors = [
+            NSSortDescriptor(key: "songTitle", ascending: true),
+            NSSortDescriptor(key: "releaseYear", ascending: true)
+        ]
+        return fetchRequest
+    }
+    
+    static func filteredSongsFetchRequest(searchCategory: String, searchQuery: String) -> NSFetchRequest<Song> {
+        
+        /*
+         fill this in later. for now it still returns all songs. This will be used in the future for searching the database
+         */
+        
+        return allSongsFetchRequest()
+    }
+    
+}

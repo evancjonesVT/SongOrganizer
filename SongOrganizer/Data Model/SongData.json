@@ -8,7 +8,7 @@
         "appleMusic": "https://music.apple.com/us/album/bohemian-rhapsody/1440650428?i=1440650711",
         "spotify": "https://open.spotify.com/track/7tFiyTwD0nx5a1eklYtX2J?si=_d9_bOuKS6u04_KBrwQppg",
         "youtube": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ",
-        "photo": "Unavailable"
+        "photo": "AlbumCoverDefaultImage"
     },
     {
         "title": "Blinding Lights",
@@ -19,7 +19,7 @@
         "appleMusic": "https://music.apple.com/us/album/blinding-lights/1499378108?i=1499378607",
         "spotify": "https://open.spotify.com/track/320T8Dnenc36SrCBbR4KOs?autoplay=true",
         "youtube": "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
-        "photo": "Unavailable"
+        "photo": "AlbumCoverDefaultImage"
     },
     {
         "title": "Purple Rain",
@@ -30,7 +30,7 @@
         "appleMusic": "https://music.apple.com/us/album/purple-rain/214145442?i=214146211",
         "spotify": "https://open.spotify.com/track/54X78diSLoUDI3joC2bjMz?si=REU0QP_0QLqtQmzzaq3lqw",
         "youtube": "https://www.youtube.com/watch?v=bm03wqLY3Nc",
-        "photo": "Unavailable"
+        "photo": "AlbumCoverDefaultImage"
     },
     {
         "title": "All Too Well",
@@ -41,6 +41,6 @@
         "appleMusic": "https://music.apple.com/us/album/all-too-well-10-minute-version-taylors-version-from/1590368448?i=1590368894",
         "spotify": "https://open.spotify.com/track/1q3RiD1tIWUpGsNFADMlvl?autoplay=true",
         "youtube": "https://www.youtube.com/watch?v=sRxrwjOtIag",
-        "photo": "Unavailable"
+        "photo": "AlbumCoverDefaultImage"
     },
 ]

@@ -23,6 +23,6 @@ public class Album: NSManagedObject, Identifiable {
 
     @NSManaged public var albumName: String?    // 'Binary Data' type
     @NSManaged public var artist: Artist?
-    @NSManaged public var song: Song?
+    @NSManaged public var song: NSSet?
     @NSManaged public var photo: Photo?
 }
