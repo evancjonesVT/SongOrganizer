@@ -9,13 +9,11 @@
 import SwiftUI
 
 struct FavoritesDetails: View {
+    
+    let song: Song
+    
     var body: some View {
         Text("Hello, FavoritesDetails!")
     }
 }
 
-struct FavoritesDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoritesDetails()
-    }
-}

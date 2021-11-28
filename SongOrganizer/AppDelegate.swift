@@ -18,7 +18,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
          Read data files upon app launch
          ***************************************
          */
-        // createMySongsDatabase()
+        createMySongsDatabase()
         return true
     }
 

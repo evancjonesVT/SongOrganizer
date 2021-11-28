@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct FavoritesItem: View {
+    
+    let song: Song
+    
+    @FetchRequest(fetchRequest: Song.allSongsFetchRequest()) var allSongs: FetchedResults<Song>
+    
     var body: some View {
-        Text("Hello, FavoritesItem!")
+        Text(song.songTitle ?? "song title unwrapfailed")
     }
 }
 
-struct FavoritesItem_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoritesItem()
-    }
-}
