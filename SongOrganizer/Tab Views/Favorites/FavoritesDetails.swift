@@ -13,7 +13,8 @@ struct FavoritesDetails: View {
     let song: Song
     
     var body: some View {
-        Text("Hello, FavoritesDetails!")
+        Text(song.songTitle ?? "")
+            .font(.system(size: 14))
     }
 }
 

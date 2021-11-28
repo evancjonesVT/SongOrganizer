@@ -15,7 +15,19 @@ struct FavoritesItem: View {
     @FetchRequest(fetchRequest: Song.allSongsFetchRequest()) var allSongs: FetchedResults<Song>
     
     var body: some View {
-        Text(song.songTitle ?? "song title unwrapfailed")
+        
+        HStack {
+            getImageFromBinaryData(binaryData: song.album!.photo!.photo, defaultFilename: "AlbumCoverDefaultImage")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 80.0)
+            VStack(alignment: .leading) {
+                Text(song.songTitle ?? "")
+                Text(song.album!.albumName ?? "")
+                Text(song.album!.artist!.artistName ?? "")
+            }
+        }
+        .font(.system(size: 14))
     }
 }
 
