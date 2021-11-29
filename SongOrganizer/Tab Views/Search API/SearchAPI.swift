@@ -89,7 +89,7 @@ struct SearchAPI: View {
                                     .imageScale(.medium)
                                     .font(Font.title.weight(.regular))
                                     .foregroundColor(.blue)
-                                Text("Show Park Details")
+                                Text("Show Song Details")
                                     .font(.system(size: 16))
                             }
                         }
