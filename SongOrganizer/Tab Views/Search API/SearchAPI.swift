@@ -19,9 +19,9 @@ struct SearchAPI: View {
             ZStack {
                 Color.gray.opacity(0.1).edgesIgnoringSafeArea(.all)
             Form {
-                Section(header: Text("Enter song name to search for similar songs")) {
+                Section(header: Text("Enter Artist name to search for similar artists")) {
                     HStack {
-                        TextField("Enter a Song Name", text: $searchFieldValue)
+                        TextField("Enter an Artist Name", text: $searchFieldValue)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .keyboardType(.default)
                             .autocapitalization(.words)
@@ -43,7 +43,7 @@ struct SearchAPI: View {
                     
                 }   // End of Section
                 
-                Section(header: Text("Search Similar Songs")) {
+                Section(header: Text("Search Similar Artists")) {
                     HStack {
                         Button(action: {
                             if inputDataValidated() {
@@ -82,14 +82,14 @@ struct SearchAPI: View {
 //                }
                 
                 if searchCompleted {
-                    Section(header: Text("Similar Songs Found")) {
+                    Section(header: Text("Similar Artists Found")) {
                         NavigationLink(destination: showSearchResults) {
                             HStack {
                                 Image(systemName: "list.bullet")
                                     .imageScale(.medium)
                                     .font(Font.title.weight(.regular))
                                     .foregroundColor(.blue)
-                                Text("Show Song Details")
+                                Text("Show Artist Details")
                                     .font(.system(size: 16))
                             }
                         }
@@ -98,7 +98,7 @@ struct SearchAPI: View {
                 }
                 
             }   // End of Form
-                .navigationBarTitle(Text("Search for Similar Songs"), displayMode: .inline)
+                .navigationBarTitle(Text("Search for Similar Artists"), displayMode: .inline)
                 .onAppear() {
                     searchCompleted = false
                 }
