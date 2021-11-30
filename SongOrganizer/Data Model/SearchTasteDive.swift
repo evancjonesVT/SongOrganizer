@@ -81,11 +81,11 @@ public func getApiDataBySongName(songName: String) {
      https://tastedive.com/api/similar?q=Guardians Of The Galaxy Vol. 2
      */
     
-    print(songName)
+    //print(songName)
     
     let apiSearchQuery = "https://tastedive.com/api/similar?q=\(songName)&k=\(myApiKey)"
     
-    print(apiSearchQuery)
+    //print(apiSearchQuery)
 
     /*
     *********************************************
@@ -178,11 +178,12 @@ public func getApiDataBySongName(songName: String) {
              where Dictionary Key type is String and Value type is Any (instance of any type)
              */
             var jsonDataDictionary = Dictionary<String, Any>()
-            print(jsonResponse)
-            print("Dictionary is ",jsonDataDictionary)
+            //print(jsonResponse)
+            //print("Dictionary is ",jsonDataDictionary)
             
             if let jsonObject = jsonResponse as? [String: Any] {
                 jsonDataDictionary = jsonObject
+                print(jsonDataDictionary)
             } else {
                 semaphore.signal()
                 return
@@ -195,6 +196,7 @@ public func getApiDataBySongName(songName: String) {
             var dataJsonArray = [Any]()
             if let jArray = jsonDataDictionary["Similar"] as? [Any] {
                 dataJsonArray = jArray
+                print(dataJsonArray)
             } else {
                 semaphore.signal()
                 return
