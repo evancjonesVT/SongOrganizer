@@ -155,7 +155,7 @@ struct SearchAPI: View {
                     .font(Font.title.weight(.medium))
                     .foregroundColor(.red)
                     .padding()
-                Text("No Song Found!\n\nThe API did not return a song under the entered name \(searchFieldValue). Please make sure that you enter a valid song name as required by the API.")
+                Text("No Artist Found!\n\nThe API did not return an artist under the entered name \(searchFieldValue). Please make sure that you enter a valid artist name as required by the API.")
                     .fixedSize(horizontal: false, vertical: true)   // Allow lines to wrap around
                     .multilineTextAlignment(.center)
                     .padding()
@@ -171,7 +171,7 @@ struct SearchAPI: View {
      */
     var missingInputDataAlert: Alert {
         Alert(title: Text("The Search Field is Empty!"),
-              message: Text("Please enter a song name to search for!"),
+              message: Text("Please enter an artist name to search for!"),
               dismissButton: .default(Text("OK")))
         /*
          Tapping OK resets @State var showMissingInputDataAlert to false.
