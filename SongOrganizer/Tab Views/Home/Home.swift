@@ -45,6 +45,7 @@ struct Home: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(minWidth: 300, maxWidth: 500, alignment: .center)
                         .padding(.horizontal, 10.0)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
 
                     // Subscribe to the timer publisher
                     .onReceive(timer) { _ in
@@ -69,6 +70,7 @@ struct Home: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 60)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
                         }
                     }
                     .padding(.bottom, 20)
@@ -80,6 +82,7 @@ struct Home: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 60)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
                         }
                     }
                     .padding(.bottom, 20)
