@@ -98,7 +98,7 @@ struct SearchAPI: View {
                 }
                 
             }   // End of Form
-                .navigationBarTitle(Text("Search a National Park"), displayMode: .inline)
+                .navigationBarTitle(Text("Search for Similar Songs"), displayMode: .inline)
                 .onAppear() {
                     searchCompleted = false
                 }
