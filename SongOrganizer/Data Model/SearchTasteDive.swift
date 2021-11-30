@@ -193,7 +193,7 @@ public func getApiDataBySongName(songName: String) {
             //-----------------------
            
             var dataJsonArray = [Any]()
-            if let jArray = jsonDataDictionary["data"] as? [Any] {
+            if let jArray = jsonDataDictionary["Similar"] as? [Any] {
                 dataJsonArray = jArray
             } else {
                 semaphore.signal()
