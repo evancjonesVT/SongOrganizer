@@ -8,11 +8,11 @@
 
 import Foundation
 /*
- The National Park Service application programming interface (NPS API) provides authoritative
- NPS data that you can use in your apps, maps, and websites. To access that data, you need an API key.
+ The TasteDive API allows for the user to search for
+ similar songs. To access that data, you need an API key.
  
- Obtain your own API key at https://www.nps.gov/subjects/developer/get-started.htm
- See API documentation at   https://www.nps.gov/subjects/developer/api-documentation.htm
+ Obtain your own API key at https://tastedive.com/read/api
+ See API documentation at   https://tastedive-api-documentation.readthedocs.io/en/latest/
  */
 let myApiKey = "427840-SongOrga-77ZYQQKF"
  
@@ -23,7 +23,7 @@ fileprivate var previousTaste = ""
 
 public func getApiDataBySongName(songName: String) {
    
-    // Avoid executing this function if already done for the same park name
+    // Avoid executing this function if already done for the same song name
     if songName == previousTaste {
         return
     } else {
@@ -31,8 +31,8 @@ public func getApiDataBySongName(songName: String) {
     }
    
     /*
-     Create an empty instance of NationalPark struct defined in NationalPark.swift
-     Assign its unique id to the global variable nationalParkFound
+     Create an empty instance of Taste struct defined in TasteStruct.swift
+     Assign its unique id to the global variable tasteFound
      */
     tasteFound = Taste(name: "", type: "", wTeaser: "", wUrl: "", yUrl: "")
    
@@ -41,11 +41,11 @@ public func getApiDataBySongName(songName: String) {
      *   API Documentation   *
      *************************
      
-     To search by full park name with photo images, we obtain the data for all 460 national parks
-     and then check if the park name = parkName given as input parameter to find the searched park.
-     The API returns the JSON file below for the following query.
-     
-     https://developer.nps.gov/api/v1/parks?q=a&limit=500&fields=images&api_key=myApiKey
+     # Basic pattern
+     https://tastedive.com/api/similar?{query}={value}&k=YOUR API-KEY&info=1
+
+     # Example query
+     https://tastedive.com/api/similar?info=1&q=Thor: Ragnarok&k=YOUR API-KEY
      
      {
      "Similar": {
@@ -74,18 +74,18 @@ public func getApiDataBySongName(songName: String) {
      */
     
     /*
-     Search query q=a will get all of the 460 national parks data with limit=500.
-     If the park name = parkName given as input parameter, then we obtain its data.
-     */
-    
-    /*
      # Basic pattern
      https://tastedive.com/api/similar?{query string}
 
      # Example query - recommendations of movie Guardians Of The Galaxy Vol. 2.
      https://tastedive.com/api/similar?q=Guardians Of The Galaxy Vol. 2
      */
-    let apiSearchQuery = "https://tastedive.com/api/similar?\(myApiKey)"
+    
+    print(songName)
+    
+    let apiSearchQuery = "https://tastedive.com/api/similar?q=\(songName)&k=\(myApiKey)"
+    
+    print(apiSearchQuery)
 
     /*
     *********************************************
@@ -98,7 +98,6 @@ public func getApiDataBySongName(songName: String) {
      if let urlStruct = URL(string: apiSearchQuery) {
          apiQueryUrlStruct = urlStruct
      } else {
-         // nationalParkFound will have the initial values set as above
          return
      }
    
@@ -179,6 +178,8 @@ public func getApiDataBySongName(songName: String) {
              where Dictionary Key type is String and Value type is Any (instance of any type)
              */
             var jsonDataDictionary = Dictionary<String, Any>()
+            print(jsonResponse)
+            print("Dictionary is ",jsonDataDictionary)
             
             if let jsonObject = jsonResponse as? [String: Any] {
                 jsonDataDictionary = jsonObject
@@ -227,12 +228,12 @@ public func getApiDataBySongName(songName: String) {
                     name = nameObtained
                 }
                 
-                // We want the park with the name searched for
+                // We want the song with the name searched for
                 if name != songName {
                     continue
                 }
                 
-                // Continue only for the park name searched for
+                // Continue only for the song name searched for
                
                 //-------------------
                 // Obtain Type
