@@ -11,6 +11,7 @@ import SwiftUI
 struct FavoritesDetails: View {
     
     let song: Song
+    @State private var lyricsButtonPressed = false
     
     var body: some View {
         Form {
@@ -77,6 +78,19 @@ struct FavoritesDetails: View {
                             .foregroundColor(.green)
                     }
                 })
+            }
+            Section(header: Text("Find Lyrics")) {
+                Button(action: {
+                    getLyrics(query1: song.album!.artist!.artistName ?? "", query2: song.songTitle ?? "")
+                    lyricsButtonPressed = true
+                }) {
+                    Text(lyricsButtonPressed ? "API Result Returned" : "Find Lyrics")
+                }
+                .frame(width: 240, height: 36, alignment: .center)
+                .background(
+                    RoundedRectangle(cornerRadius: 16)
+                        .strokeBorder(Color.black, lineWidth: 1)
+                )
             }
         } // End Form
         .navigationBarTitle(Text("Song Details"), displayMode: .inline)
