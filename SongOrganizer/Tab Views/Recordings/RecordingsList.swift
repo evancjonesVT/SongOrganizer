@@ -41,6 +41,10 @@ struct RecordingsList: View {
                     
                 }
                 Image(systemName: "mic")
+                    .imageScale(.large)
+                    .font(Font.title.weight(.medium))
+                    .foregroundColor(.blue)
+                    .padding()
             }
             
             
