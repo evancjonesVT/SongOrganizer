@@ -9,12 +9,14 @@
 import Foundation
 import SwiftUI
 
+// Global variables
+var lyric = ""
+
 /*
  =================================
  MARK: Obtain Lyrics Data from API
  =================================
  */
-
 public func getLyrics(query1: String, query2: String) {
     
     // Filter spaces with %20.
@@ -29,7 +31,14 @@ public func getLyrics(query1: String, query2: String) {
         let jsonResponse = try JSONSerialization.jsonObject(with: getLyricsJsonData!,
             options: JSONSerialization.ReadingOptions.mutableContainers)
         
-        print(jsonResponse)
+        //print(jsonResponse)
+        if let lyricsObject = jsonResponse as? [String: Any] {
+            //print(lyricsObject)
+            if let theLyrics = lyricsObject["lyrics"] as? String {
+                lyric = theLyrics
+                print(lyric)
+            }
+        }
         
     } catch {
         return
