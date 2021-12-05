@@ -46,11 +46,28 @@ extension Song {
     
     static func filteredSongsFetchRequest(searchCategory: String, searchQuery: String) -> NSFetchRequest<Song> {
         
-        /*
-         fill this in later. for now it still returns all songs. This will be used in the future for searching the database
-         */
+        let fetchRequest = NSFetchRequest<Song>(entityName: "Song")
+    
         
-        return allSongsFetchRequest()
+        fetchRequest.sortDescriptors = [
+            NSSortDescriptor(key: "songTitle", ascending: true),
+            NSSortDescriptor(key: "releaseYear", ascending: true)
+        ]
+        
+        /*
+         Created NSPredicate object represents a condition or a compound condition with
+         AND/OR logical operators, which is used to filter fetching from the database.
+         */
+        switch searchCategory {
+        case "Song Title":
+            fetchRequest.predicate = NSPredicate(format: "songTitle CONTAINS[c] %@", searchQuery)
+        case "Release Year":
+            fetchRequest.predicate = NSPredicate(format: "releaseYear CONTAINS[c] %@", searchQuery)
+        default:
+            print("Search category is out of range")
+        }
+        
+        return fetchRequest
     }
     
 }
