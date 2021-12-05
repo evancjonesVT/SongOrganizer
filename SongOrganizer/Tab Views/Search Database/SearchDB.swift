@@ -14,6 +14,15 @@ struct SearchDB: View {
             Color.gray.opacity(0.1).edgesIgnoringSafeArea(.all)
             NavigationView {
                 List {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "music.note.list")
+                            .foregroundColor(.blue)
+                            .imageScale(.large)
+                            .font(Font.title.weight(.regular))
+                            .frame(width: 60)
+                        Spacer()
+                    }
                     NavigationLink(destination: SearchSong()) {
                         HStack {
                             Image(systemName: "magnifyingglass")
