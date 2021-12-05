@@ -36,7 +36,7 @@ public func getLyrics(query1: String, query2: String) {
             //print(lyricsObject)
             if let theLyrics = lyricsObject["lyrics"] as? String {
                 lyric = theLyrics
-                print(lyric)
+                //print(lyric)
             }
         }
         

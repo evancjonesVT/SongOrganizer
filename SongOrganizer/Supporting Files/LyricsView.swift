@@ -17,7 +17,9 @@ struct LyricsView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
-                    Image("AlbumCoverDefaultImage")
+                    getImageFromUrl(url: imageUrl, defaultFilename: "AlbumCoverDefaultImage")
+                        .resizable()
+                        .frame(width: 250, height: 250)
                     Text("By \(artistName)\n")
                         .bold()
                     Text(lyric)

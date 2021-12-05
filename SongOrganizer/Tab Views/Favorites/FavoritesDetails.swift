@@ -83,6 +83,7 @@ struct FavoritesDetails: View {
                 Section(header: Text("Find Lyrics")) {
                     Button(action: {
                         getLyrics(query1: song.album!.artist!.artistName ?? "", query2: song.songTitle ?? "")
+                        getAlbumCover(query1: song.songTitle ?? "")
                         lyricsButtonPressed = true
                     }) {
                         Text(lyricsButtonPressed ? "API Results Returned" : "Find Lyrics")

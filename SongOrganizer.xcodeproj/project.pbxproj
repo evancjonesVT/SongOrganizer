@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7988E9892756846400DDBC7B /* LyricsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988E9882756846400DDBC7B /* LyricsAPI.swift */; };
 		79E14B92275C35D60005337F /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E14B91275C35D60005337F /* LyricsView.swift */; };
+		79E14B94275C3D190005337F /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E14B93275C3D190005337F /* Spotify.swift */; };
 		BF3BB9812754126E00A9A116 /* MySongsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB9802754126E00A9A116 /* MySongsData.swift */; };
 		BF3BB9832754142400A9A116 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB9822754142400A9A116 /* UtilityFunctions.swift */; };
 		BF3BB986275422D200A9A116 /* AddSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB985275422D200A9A116 /* AddSong.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		7988E9882756846400DDBC7B /* LyricsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsAPI.swift; sourceTree = "<group>"; };
 		79E14B91275C35D60005337F /* LyricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
+		79E14B93275C3D190005337F /* Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 		BF3BB9802754126E00A9A116 /* MySongsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySongsData.swift; sourceTree = "<group>"; };
 		BF3BB9822754142400A9A116 /* UtilityFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 		BF3BB98427541AA200A9A116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				BF3BB99927559EC300A9A116 /* SearchTasteDive.swift */,
 				BF3BB9902755910500A9A116 /* TasteStruct.swift */,
 				7988E9882756846400DDBC7B /* LyricsAPI.swift */,
+				79E14B93275C3D190005337F /* Spotify.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				BF3BB9922755910500A9A116 /* TasteStruct.swift in Sources */,
 				BF3BB99A27559EC400A9A116 /* SearchTasteDive.swift in Sources */,
 				BF3BB99C2755AF5000A9A116 /* WebView.swift in Sources */,
+				79E14B94275C3D190005337F /* Spotify.swift in Sources */,
 				BFE2D233274733080083D7E6 /* RecordingsItem.swift in Sources */,
 				BFD98E182743147100A75D21 /* ContentView.swift in Sources */,
 				7988E9892756846400DDBC7B /* LyricsAPI.swift in Sources */,
