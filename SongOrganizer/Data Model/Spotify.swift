@@ -12,9 +12,12 @@ import SwiftUI
 var imageUrl = ""
 
 public func getAlbumCover(query1: String) {
+    imageUrl = ""
     let searchQuery1 = query1.replacingOccurrences(of: " ", with: "%20")
     
     let apiUrl = "https://api.spotify.com/v1/search?q=\(searchQuery1)&type=track&limit=1"
+    
+    print(apiUrl)
     
     /*
     *******************************
@@ -24,6 +27,7 @@ public func getAlbumCover(query1: String) {
     
     let headers = [
         "accept": "application/json",
+        "content-type": "application/json",
         "authorization": "Bearer BQDgo8rZh3-Rbfu_4N0lxmUnwX-rZ6Oy-cRdDm8z6jCaZQKqwPS_04KerBcuM0PYhXabDMUsphAAnRHLMImMvVsU2nmhKcntls977mm65puqndjzhTr2yd8-UgVL3RP__BAr9jgMdNMNPTM",
         "host": "https://api.spotify.com"
     ]
@@ -91,7 +95,7 @@ public func getAlbumCover(query1: String) {
              */
             let jsonResponse = try JSONSerialization.jsonObject(with: jsonDataFromApi,
                                options: JSONSerialization.ReadingOptions.mutableContainers)
-            //print(jsonResponse)
+            print(jsonResponse)
             
             if let jsonArray = jsonResponse as? [String: Any] {
                 //print(jsonArray)
@@ -122,7 +126,11 @@ public func getAlbumCover(query1: String) {
                             }
                         }
                     }
+                } else {
+                    print("track failed")
                 }
+            } else {
+                print("array failed")
             }
             
         } catch {
