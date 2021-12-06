@@ -13,7 +13,6 @@ struct SearchResultItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(tasteFound.name)
-            Text(tasteFound.type)
         }
         .font(.system(size: 14))
     }
