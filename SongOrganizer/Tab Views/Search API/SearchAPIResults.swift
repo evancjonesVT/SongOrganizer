@@ -10,21 +10,14 @@ import SwiftUI
 
 struct SearchAPIResults: View {
     var body: some View {
-        Form {
-            Section(header: Text("Name")) {
-                Text(tasteFound.name)
+        List {
+            ForEach(tasteList, id: \.self) { anArtist in
+                NavigationLink(destination: SearchResultDetails(taste: anArtist)) {
+                    Text(anArtist.name)
+                }
             }
-            
-        }   // End of Form
-            .navigationBarTitle(Text("Similar"), displayMode: .inline)
-            .font(.system(size: 14))
-        
+        }   // End of List
+        .navigationBarTitle(Text("Similar Artists Found"), displayMode: .inline)
     }   // End of body
     
-}
-
-struct SearchAPIResults_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchAPIResults()
-    }
 }
