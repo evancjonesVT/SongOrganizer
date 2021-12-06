@@ -215,3 +215,26 @@ public func getJsonDataFromApi(apiUrl: String) -> Data? {
         return nil
     }
 }
+
+/*
+******************************************************
+MARK: Copy File from Main Bundle to Document Directory
+******************************************************
+*/
+public func copyFileFromMainBundleToDocumentDirectory(filename: String, fileExtension: String) {
+    
+    if let fileUrlInMainBundle = Bundle.main.url(forResource: filename, withExtension: fileExtension) {
+        
+        let fileUrlInDocDir = documentDirectory.appendingPathComponent("\(filename).\(fileExtension)")
+        
+        do {
+            try FileManager.default.copyItem(at: fileUrlInMainBundle, to: fileUrlInDocDir)
+        } catch {
+            print("Unable to copy file \(filename).\(fileExtension) from main bundle to document directory!")
+        }
+        
+    } else {
+        print("The file \(filename).\(fileExtension) does not exist in main bundle!")
+    }
+}
+

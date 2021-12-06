@@ -15,9 +15,9 @@ struct RecordingsList: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(userData.voiceMemosList) { aVoiceMemo in
-                    NavigationLink(destination: VoiceMemoDetails(voiceMemo: aVoiceMemo)) {
-                        VoiceMemoItem(voiceMemo: aVoiceMemo)
+                ForEach(userData.voiceMemosList) { aRecording in
+                    NavigationLink(destination: RecordingsDetails(voiceMemo: aRecording)) {
+                        RecordingsItem(voiceMemo: aRecording)
                     }
                 }
                     .onDelete(perform: delete)
