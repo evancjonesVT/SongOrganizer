@@ -14,6 +14,14 @@
 		792CCADE275EA8D600A0D773 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792CCADD275EA8D600A0D773 /* AudioPlayer.swift */; };
 		7988E9892756846400DDBC7B /* LyricsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988E9882756846400DDBC7B /* LyricsAPI.swift */; };
 		79C74768275EAB62001D6107 /* RecordingsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C74767275EAB62001D6107 /* RecordingsDetails.swift */; };
+		79C7476E275EAF8A001D6107 /* VoiceMemosData.json in Resources */ = {isa = PBXBuildFile; fileRef = 79C7476D275EAF8A001D6107 /* VoiceMemosData.json */; };
+		79C74777275EAF92001D6107 /* FF2DABA6-9567-46E0-93E6-24DE54D6E5D4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 79C74770275EAF92001D6107 /* FF2DABA6-9567-46E0-93E6-24DE54D6E5D4.m4a */; };
+		79C74778275EAF92001D6107 /* 6C07DEB3-E743-43B2-9E08-6E5DEE84E0A9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 79C74771275EAF92001D6107 /* 6C07DEB3-E743-43B2-9E08-6E5DEE84E0A9.m4a */; };
+		79C74779275EAF92001D6107 /* A98DA9E7-7A6D-4AAF-9A12-A3306D44640B.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 79C74772275EAF92001D6107 /* A98DA9E7-7A6D-4AAF-9A12-A3306D44640B.m4a */; };
+		79C7477A275EAF92001D6107 /* 6E02D333-EBAA-479E-B15A-37280C8DD9A1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 79C74773275EAF92001D6107 /* 6E02D333-EBAA-479E-B15A-37280C8DD9A1.m4a */; };
+		79C7477B275EAF92001D6107 /* 42977BE0-2CD8-4DAC-8417-8BBD3B771B33.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 79C74774275EAF92001D6107 /* 42977BE0-2CD8-4DAC-8417-8BBD3B771B33.m4a */; };
+		79C7477C275EAF92001D6107 /* E2586635-B042-4315-8E9F-A56BF59507E0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 79C74775275EAF92001D6107 /* E2586635-B042-4315-8E9F-A56BF59507E0.m4a */; };
+		79C7477D275EAF92001D6107 /* 7586915E-5BF5-4299-ACA3-7BBC164D8000.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 79C74776275EAF92001D6107 /* 7586915E-5BF5-4299-ACA3-7BBC164D8000.m4a */; };
 		79E14B92275C35D60005337F /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E14B91275C35D60005337F /* LyricsView.swift */; };
 		79E14B94275C3D190005337F /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E14B93275C3D190005337F /* Spotify.swift */; };
 		BF3BB9812754126E00A9A116 /* MySongsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB9802754126E00A9A116 /* MySongsData.swift */; };
@@ -64,6 +72,14 @@
 		792CCADD275EA8D600A0D773 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		7988E9882756846400DDBC7B /* LyricsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsAPI.swift; sourceTree = "<group>"; };
 		79C74767275EAB62001D6107 /* RecordingsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsDetails.swift; sourceTree = "<group>"; };
+		79C7476D275EAF8A001D6107 /* VoiceMemosData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VoiceMemosData.json; sourceTree = "<group>"; };
+		79C74770275EAF92001D6107 /* FF2DABA6-9567-46E0-93E6-24DE54D6E5D4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FF2DABA6-9567-46E0-93E6-24DE54D6E5D4.m4a"; sourceTree = "<group>"; };
+		79C74771275EAF92001D6107 /* 6C07DEB3-E743-43B2-9E08-6E5DEE84E0A9.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "6C07DEB3-E743-43B2-9E08-6E5DEE84E0A9.m4a"; sourceTree = "<group>"; };
+		79C74772275EAF92001D6107 /* A98DA9E7-7A6D-4AAF-9A12-A3306D44640B.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A98DA9E7-7A6D-4AAF-9A12-A3306D44640B.m4a"; sourceTree = "<group>"; };
+		79C74773275EAF92001D6107 /* 6E02D333-EBAA-479E-B15A-37280C8DD9A1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "6E02D333-EBAA-479E-B15A-37280C8DD9A1.m4a"; sourceTree = "<group>"; };
+		79C74774275EAF92001D6107 /* 42977BE0-2CD8-4DAC-8417-8BBD3B771B33.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "42977BE0-2CD8-4DAC-8417-8BBD3B771B33.m4a"; sourceTree = "<group>"; };
+		79C74775275EAF92001D6107 /* E2586635-B042-4315-8E9F-A56BF59507E0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "E2586635-B042-4315-8E9F-A56BF59507E0.m4a"; sourceTree = "<group>"; };
+		79C74776275EAF92001D6107 /* 7586915E-5BF5-4299-ACA3-7BBC164D8000.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "7586915E-5BF5-4299-ACA3-7BBC164D8000.m4a"; sourceTree = "<group>"; };
 		79E14B91275C35D60005337F /* LyricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
 		79E14B93275C3D190005337F /* Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 		BF3BB9802754126E00A9A116 /* MySongsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySongsData.swift; sourceTree = "<group>"; };
@@ -119,6 +135,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79C7476F275EAF92001D6107 /* AudioFiles */ = {
+			isa = PBXGroup;
+			children = (
+				79C74770275EAF92001D6107 /* FF2DABA6-9567-46E0-93E6-24DE54D6E5D4.m4a */,
+				79C74771275EAF92001D6107 /* 6C07DEB3-E743-43B2-9E08-6E5DEE84E0A9.m4a */,
+				79C74772275EAF92001D6107 /* A98DA9E7-7A6D-4AAF-9A12-A3306D44640B.m4a */,
+				79C74773275EAF92001D6107 /* 6E02D333-EBAA-479E-B15A-37280C8DD9A1.m4a */,
+				79C74774275EAF92001D6107 /* 42977BE0-2CD8-4DAC-8417-8BBD3B771B33.m4a */,
+				79C74775275EAF92001D6107 /* E2586635-B042-4315-8E9F-A56BF59507E0.m4a */,
+				79C74776275EAF92001D6107 /* 7586915E-5BF5-4299-ACA3-7BBC164D8000.m4a */,
+			);
+			path = AudioFiles;
+			sourceTree = "<group>";
+		};
 		BFD98E092743147100A75D21 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +172,7 @@
 				BFD98E172743147100A75D21 /* ContentView.swift */,
 				BFE2D2382747339C0083D7E6 /* AppDelegate.swift */,
 				BFE2D2272747321C0083D7E6 /* API Data */,
+				79C7476F275EAF92001D6107 /* AudioFiles */,
 				BFE2D21E274731180083D7E6 /* Data Model */,
 				BFE2D21F274731230083D7E6 /* Supporting Files */,
 				BFE2D220274731430083D7E6 /* Core Data Model */,
@@ -164,6 +195,7 @@
 		BFE2D21E274731180083D7E6 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				79C7476D275EAF8A001D6107 /* VoiceMemosData.json */,
 				BFE2D23C274D50B60083D7E6 /* SongData.json */,
 				BFE2D23E274D59EC0083D7E6 /* MySongStruct.swift */,
 				BF3BB9802754126E00A9A116 /* MySongsData.swift */,
@@ -337,9 +369,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C7476E275EAF8A001D6107 /* VoiceMemosData.json in Resources */,
 				BFD98E1D2743147500A75D21 /* Preview Assets.xcassets in Resources */,
 				BFD98E1A2743147500A75D21 /* Assets.xcassets in Resources */,
+				79C7477A275EAF92001D6107 /* 6E02D333-EBAA-479E-B15A-37280C8DD9A1.m4a in Resources */,
+				79C7477B275EAF92001D6107 /* 42977BE0-2CD8-4DAC-8417-8BBD3B771B33.m4a in Resources */,
+				79C74778275EAF92001D6107 /* 6C07DEB3-E743-43B2-9E08-6E5DEE84E0A9.m4a in Resources */,
+				79C7477C275EAF92001D6107 /* E2586635-B042-4315-8E9F-A56BF59507E0.m4a in Resources */,
 				BFE2D23D274D50B60083D7E6 /* SongData.json in Resources */,
+				79C74777275EAF92001D6107 /* FF2DABA6-9567-46E0-93E6-24DE54D6E5D4.m4a in Resources */,
+				79C74779275EAF92001D6107 /* A98DA9E7-7A6D-4AAF-9A12-A3306D44640B.m4a in Resources */,
+				79C7477D275EAF92001D6107 /* 7586915E-5BF5-4299-ACA3-7BBC164D8000.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

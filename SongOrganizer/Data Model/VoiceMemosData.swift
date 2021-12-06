@@ -27,7 +27,6 @@ var audioSession = AVAudioSession()
  */
 var dataChanged = false
 
-var fileExists = false
 
 /*
  ********************************
@@ -72,12 +71,11 @@ public func readVoiceMemosDataFile() {
          The VoiceMemosData.json file exists in document directory on the user's device.
          Load it from Document Directory into voiceMemoStructList.
          */
-        
-        if fileExists == true {
+
             // The function is given in UtilityFunctions.swift
             voiceMemoStructList = decodeJsonFileIntoArrayOfStructs(fullFilename: voiceMemosDataFullFilename, fileLocation: "Document Directory")
             print("VoiceMemosData is loaded from document directory")
-        }
+        
         
        
     } catch {
@@ -92,11 +90,9 @@ public func readVoiceMemosDataFile() {
          since we write and read the file in document directory on the user's device after first use.
          */
        
-        if fileExists == true {
             // The function is given in UtilityFunctions.swift
             voiceMemoStructList = decodeJsonFileIntoArrayOfStructs(fullFilename: voiceMemosDataFullFilename, fileLocation: "Main Bundle")
             print("VoiceMemosData is loaded from main bundle")
-        }
     }
     
     if !fileExistsInDocumentDirectory {
