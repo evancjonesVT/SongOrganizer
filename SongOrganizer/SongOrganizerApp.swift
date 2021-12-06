@@ -37,6 +37,8 @@ struct SongOrganizerApp: App {
                     @Environment(\.managedObjectContext) var managedObjectContext
                  */
                 .environment(\.managedObjectContext, managedObjectContext)
+                .environmentObject(UserData())
+                .environmentObject(AudioPlayer())
         }
         .onChange(of: scenePhase) { _ in
             /*
@@ -44,6 +46,10 @@ struct SongOrganizerApp: App {
              changes. The saveContext() method is given in Persistence.
              */
             PersistenceController.shared.saveContext()
+            
+            if dataChanged {
+                writeVoiceMemosDataFile()        // In VoiceMemosData
+            }
         }
     }
 }

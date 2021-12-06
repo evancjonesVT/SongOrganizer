@@ -19,6 +19,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
          ***************************************
          */
         createMySongsDatabase()
+        getPermissionForVoiceRecording()  
         return true
     }
 

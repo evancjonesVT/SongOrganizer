@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792CCACC275EA3B100A0D773 /* RecordVoiceMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792CCACB275EA3B100A0D773 /* RecordVoiceMemo.swift */; };
+		792CCAD8275EA78C00A0D773 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792CCAD7275EA78C00A0D773 /* UserData.swift */; };
+		792CCADA275EA81E00A0D773 /* VoiceMemoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792CCAD9275EA81E00A0D773 /* VoiceMemoStruct.swift */; };
+		792CCADC275EA83A00A0D773 /* VoiceMemosData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792CCADB275EA83A00A0D773 /* VoiceMemosData.swift */; };
+		792CCADE275EA8D600A0D773 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792CCADD275EA8D600A0D773 /* AudioPlayer.swift */; };
 		7988E9892756846400DDBC7B /* LyricsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988E9882756846400DDBC7B /* LyricsAPI.swift */; };
 		79E14B92275C35D60005337F /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E14B91275C35D60005337F /* LyricsView.swift */; };
 		79E14B94275C3D190005337F /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E14B93275C3D190005337F /* Spotify.swift */; };
@@ -51,6 +56,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		792CCACB275EA3B100A0D773 /* RecordVoiceMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVoiceMemo.swift; sourceTree = "<group>"; };
+		792CCAD7275EA78C00A0D773 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		792CCAD9275EA81E00A0D773 /* VoiceMemoStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoStruct.swift; sourceTree = "<group>"; };
+		792CCADB275EA83A00A0D773 /* VoiceMemosData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemosData.swift; sourceTree = "<group>"; };
+		792CCADD275EA8D600A0D773 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		7988E9882756846400DDBC7B /* LyricsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsAPI.swift; sourceTree = "<group>"; };
 		79E14B91275C35D60005337F /* LyricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
 		79E14B93275C3D190005337F /* Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
@@ -159,6 +169,9 @@
 				BF3BB9902755910500A9A116 /* TasteStruct.swift */,
 				7988E9882756846400DDBC7B /* LyricsAPI.swift */,
 				79E14B93275C3D190005337F /* Spotify.swift */,
+				792CCAD7275EA78C00A0D773 /* UserData.swift */,
+				792CCAD9275EA81E00A0D773 /* VoiceMemoStruct.swift */,
+				792CCADB275EA83A00A0D773 /* VoiceMemosData.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -170,6 +183,7 @@
 				BF3BB9822754142400A9A116 /* UtilityFunctions.swift */,
 				BF3BB99B2755AF5000A9A116 /* WebView.swift */,
 				79E14B91275C35D60005337F /* LyricsView.swift */,
+				792CCADD275EA8D600A0D773 /* AudioPlayer.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -223,6 +237,7 @@
 			children = (
 				BFE2D230274732FA0083D7E6 /* RecordingsList.swift */,
 				BFE2D232274733080083D7E6 /* RecordingsItem.swift */,
+				792CCACB275EA3B100A0D773 /* RecordVoiceMemo.swift */,
 			);
 			path = Recordings;
 			sourceTree = "<group>";
@@ -332,16 +347,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792CCADE275EA8D600A0D773 /* AudioPlayer.swift in Sources */,
 				BFE2D23B2747353C0083D7E6 /* SearchResultsEmpty.swift in Sources */,
 				BF93C057275D500D00A98CAF /* SearchDBItem.swift in Sources */,
 				BF93C053275D4F1600A98CAF /* SearchSongsResultsList.swift in Sources */,
 				BFE2D231274732FA0083D7E6 /* RecordingsList.swift in Sources */,
+				792CCACC275EA3B100A0D773 /* RecordVoiceMemo.swift in Sources */,
 				BFE2D22B274732B70083D7E6 /* FavoritesList.swift in Sources */,
 				BFE2D243274D5C620083D7E6 /* Album.swift in Sources */,
 				BF93C051275D4B5A00A98CAF /* SearchArtist.swift in Sources */,
 				BF93C055275D4FF500A98CAF /* SearchDBDetails.swift in Sources */,
 				BFE2D2372747333E0083D7E6 /* SearchAPI.swift in Sources */,
 				BFD98E1F2743147500A75D21 /* Persistence.swift in Sources */,
+				792CCADC275EA83A00A0D773 /* VoiceMemosData.swift in Sources */,
 				BF93C04F275D4B4F00A98CAF /* SearchAlbum.swift in Sources */,
 				BF3BB9972755915D00A9A116 /* SearchResultList.swift in Sources */,
 				BFE2D22F274732E60083D7E6 /* FavoritesDetails.swift in Sources */,
@@ -360,7 +378,9 @@
 				BFE2D2392747339C0083D7E6 /* AppDelegate.swift in Sources */,
 				BF3BB9832754142400A9A116 /* UtilityFunctions.swift in Sources */,
 				BFE2D247274D5C780083D7E6 /* Photo.swift in Sources */,
+				792CCAD8275EA78C00A0D773 /* UserData.swift in Sources */,
 				BFE2D245274D5C6E0083D7E6 /* Artist.swift in Sources */,
+				792CCADA275EA81E00A0D773 /* VoiceMemoStruct.swift in Sources */,
 				BFE2D229274732A60083D7E6 /* Home.swift in Sources */,
 				BF93C04D275D4B4300A98CAF /* SearchSong.swift in Sources */,
 				BFE2D241274D5C440083D7E6 /* Song.swift in Sources */,
