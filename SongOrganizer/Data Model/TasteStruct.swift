@@ -13,6 +13,7 @@ struct Taste: Hashable {
     var type: String
     var wTeaser: String
     var wUrl: String
+    var yID: String
     var yUrl: String
 }
 

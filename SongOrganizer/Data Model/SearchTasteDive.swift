@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 /*
  The TasteDive API allows for the user to search for
  similar songs. To access that data, you need an API key.
@@ -17,24 +18,29 @@ import Foundation
 let myApiKey = "427840-SongOrga-77ZYQQKF"
  
 // Declare nationalParkFound as a global mutable variable accessible in all Swift files
-var tasteFound = Taste(name: "", type: "", wTeaser: "", wUrl: "", yUrl: "")
+//var tasteStructList = [Taste]()
+var tasteList = [Taste]()
+
+var tasteFound = Taste(name: "", type: "", wTeaser: "", wUrl: "", yID: "", yUrl: "")
  
 fileprivate var previousTaste = ""
 
-public func getApiDataBySongName(songName: String) {
+public func getApiDataBySongName(artistName: String) {
    
     // Avoid executing this function if already done for the same song name
-    if songName == previousTaste {
+    // replace occurences of spaces with %20 for artist name
+    let artistName = artistName.replacingOccurrences(of: " ", with: "%20")
+    if artistName == previousTaste {
         return
     } else {
-        previousTaste = songName
+        previousTaste = artistName
     }
    
     /*
      Create an empty instance of Taste struct defined in TasteStruct.swift
      Assign its unique id to the global variable tasteFound
      */
-    tasteFound = Taste(name: "", type: "", wTeaser: "", wUrl: "", yUrl: "")
+    tasteFound = Taste(name: "", type: "", wTeaser: "", wUrl: "", yID: "", yUrl: "")
    
     /*
      *************************
@@ -81,11 +87,9 @@ public func getApiDataBySongName(songName: String) {
      https://tastedive.com/api/similar?q=Guardians Of The Galaxy Vol. 2
      */
     
-    //print(songName)
+    let apiSearchQuery = "https://tastedive.com/api/similar?info=1&q=\(artistName)&k=\(myApiKey)"
     
-    let apiSearchQuery = "https://tastedive.com/api/similar?q=\(songName)&k=\(myApiKey)"
-    
-    //print(apiSearchQuery)
+    print(apiSearchQuery)
 
     /*
     *********************************************
@@ -178,30 +182,32 @@ public func getApiDataBySongName(songName: String) {
              where Dictionary Key type is String and Value type is Any (instance of any type)
              */
             var jsonDataDictionary = Dictionary<String, Any>()
+            
             //print(jsonResponse)
-            //print("Dictionary is ",jsonDataDictionary)
+//            print("Dictionary is ",jsonDataDictionary)
             
             if let jsonObject = jsonResponse as? [String: Any] {
+                //print(jsonObject)
+                //print(jsonObject)
                 jsonDataDictionary = jsonObject
-                print(jsonDataDictionary)
             } else {
                 semaphore.signal()
                 return
             }
-           
+           //print("d",jsonDataDictionary)
             //-----------------------
             // Obtain Data JSON Array
             //-----------------------
-           
-            var dataJsonArray = [Any]()
-            if let jArray = jsonDataDictionary["Similar"] as? [Any] {
+            //print("Dictionary is ",jsonDataDictionary)
+            var dataJsonArray = [String: Any]()
+            //dataJsonArray = jsonResponse as [Any]
+            if let jArray = jsonDataDictionary["Similar"] as? [String: Any] {
                 dataJsonArray = jArray
-                print(dataJsonArray)
             } else {
                 semaphore.signal()
                 return
             }
-            
+            //print("dataJson", dataJsonArray)
             /*
              API returns the following for invalid national park name
              {"total":"0","data":[],"limit":"50","start":"1"}
@@ -210,17 +216,19 @@ public func getApiDataBySongName(songName: String) {
                 semaphore.signal()
                 return
             }
+            let dataArray = dataJsonArray["Results"] as! [Any]
             
-            // Iterate over all the national parks returned
-            for taste in dataJsonArray {
-                
+            //print("dArray", dataArray)
+            // Iterate over all the songs returned
+            for taste in dataArray {                    // How to get this into list?
+
                 let tastes = taste as! [String: Any]
                
                 //----------------
                 // Initializations
                 //----------------
      
-                var name = "", type = "", wTeaser = "", wUrl = "", yUrl = ""
+                var name = "", type = "", wTeaser = "", wUrl = "", yID = "", yUrl = ""
      
                 //-----------------
                 // Obtain Name
@@ -229,11 +237,12 @@ public func getApiDataBySongName(songName: String) {
                 if let nameObtained = tastes["Name"] as? String {
                     name = nameObtained
                 }
+                //print("name found", name)
                 
                 // We want the song with the name searched for
-                if name != songName {
-                    continue
-                }
+//                if aname != artistName {
+//                    continue
+//                }
                 
                 // Continue only for the song name searched for
                
@@ -249,7 +258,7 @@ public func getApiDataBySongName(songName: String) {
                 // Obtain Description
                 //-------------------
                
-                if let description = tastes["Type"] as? String {
+                if let description = tastes["wTeaser"] as? String {
                     wTeaser = description
                 }
                
@@ -263,12 +272,15 @@ public func getApiDataBySongName(songName: String) {
                     wUrl = cleanedUrl
                 }
                 
+                if let ytID = tastes["yID"] as? String {
+                    yID = ytID
+                }
                 //---------------------------------
                 // Obtain Youtube URL
                 //---------------------------------
                 
                 if let rawUrlYT = tastes["yUrl"] as? String {
-                    
+
                     let cleanedUrl = rawUrlYT.replacingOccurrences(of: "\\", with: "")
                     yUrl = cleanedUrl
                 }
@@ -277,9 +289,17 @@ public func getApiDataBySongName(songName: String) {
                  Create an instance of TasteDive struct, dress it up with the values obtained from the API,
                  and set its id to the global variable tasteFound
                  */
-                tasteFound = Taste(name: name, type: type, wTeaser: wTeaser, wUrl: wUrl, yUrl: yUrl)
+                tasteFound = Taste(name: name, type: type, wTeaser: wTeaser, wUrl: wUrl, yID: yID, yUrl: yUrl)
+                
+                //print("Taste found is ", tasteFound.name)
+                //let tt = "\(tasteFound.name)|\(tasteFound.type)|\(tasteFound.wTeaser)|\(tasteFound.wUrl)|\(tasteFound.yUrl)"
+                
+                tasteList.append(tasteFound)
+                
+                //print("hello ", tasteFound.wUrl)
                 
             }   // End of the for loop
+            //print("List is ", tasteList)
                
         } catch {
             semaphore.signal()
