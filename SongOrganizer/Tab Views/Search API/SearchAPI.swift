@@ -73,14 +73,6 @@ struct SearchAPI: View {
                     }   // End of HStack
                 }
                 
-//                if showProgressView {
-//                    Section {
-//                        ProgressView()
-//                            // Style defined in ProgressViewStyle.swift
-//                            .progressViewStyle(DarkBlueShadowProgressViewStyle())
-//                    }
-//                }
-                
                 if searchCompleted {
                     Section(header: Text("Similar Artists Found")) {
                         NavigationLink(destination: showSearchResults) {
@@ -121,7 +113,7 @@ struct SearchAPI: View {
         let songNameTrimmed = searchFieldValue.trimmingCharacters(in: .whitespacesAndNewlines)
         
         // public function getApiDataByNationalParkName is given in SearchByNameApiData.swift
-        getApiDataBySongName(songName: songNameTrimmed)
+        getApiDataBySongName(artistName: songNameTrimmed)
     }
     
     /*
@@ -195,10 +187,3 @@ struct SearchAPI: View {
     }
     
 }
-
-struct SearchAPI_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchAPI()
-    }
-}
-
