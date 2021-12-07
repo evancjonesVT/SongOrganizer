@@ -35,7 +35,7 @@ public func getApiDataBySongName(artistName: String) {
     } else {
         previousTaste = artistName
     }
-   
+    tasteList.removeAll()
     /*
      Create an empty instance of Taste struct defined in TasteStruct.swift
      Assign its unique id to the global variable tasteFound
@@ -88,8 +88,6 @@ public func getApiDataBySongName(artistName: String) {
      */
     
     let apiSearchQuery = "https://tastedive.com/api/similar?info=1&q=\(artistName)&k=\(myApiKey)"
-    
-    print(apiSearchQuery)
 
     /*
     *********************************************
@@ -183,31 +181,22 @@ public func getApiDataBySongName(artistName: String) {
              */
             var jsonDataDictionary = Dictionary<String, Any>()
             
-            //print(jsonResponse)
-//            print("Dictionary is ",jsonDataDictionary)
-            
             if let jsonObject = jsonResponse as? [String: Any] {
-                //print(jsonObject)
-                //print(jsonObject)
                 jsonDataDictionary = jsonObject
             } else {
                 semaphore.signal()
                 return
             }
-           //print("d",jsonDataDictionary)
             //-----------------------
             // Obtain Data JSON Array
             //-----------------------
-            //print("Dictionary is ",jsonDataDictionary)
             var dataJsonArray = [String: Any]()
-            //dataJsonArray = jsonResponse as [Any]
             if let jArray = jsonDataDictionary["Similar"] as? [String: Any] {
                 dataJsonArray = jArray
             } else {
                 semaphore.signal()
                 return
             }
-            //print("dataJson", dataJsonArray)
             /*
              API returns the following for invalid national park name
              {"total":"0","data":[],"limit":"50","start":"1"}
@@ -218,9 +207,8 @@ public func getApiDataBySongName(artistName: String) {
             }
             let dataArray = dataJsonArray["Results"] as! [Any]
             
-            //print("dArray", dataArray)
             // Iterate over all the songs returned
-            for taste in dataArray {                    // How to get this into list?
+            for taste in dataArray {
 
                 let tastes = taste as! [String: Any]
                
@@ -237,12 +225,6 @@ public func getApiDataBySongName(artistName: String) {
                 if let nameObtained = tastes["Name"] as? String {
                     name = nameObtained
                 }
-                //print("name found", name)
-                
-                // We want the song with the name searched for
-//                if aname != artistName {
-//                    continue
-//                }
                 
                 // Continue only for the song name searched for
                
@@ -291,16 +273,10 @@ public func getApiDataBySongName(artistName: String) {
                  */
                 tasteFound = Taste(name: name, type: type, wTeaser: wTeaser, wUrl: wUrl, yID: yID, yUrl: yUrl)
                 
-                //print("Taste found is ", tasteFound.name)
-                //let tt = "\(tasteFound.name)|\(tasteFound.type)|\(tasteFound.wTeaser)|\(tasteFound.wUrl)|\(tasteFound.yUrl)"
-                
                 tasteList.append(tasteFound)
                 
-                //print("hello ", tasteFound.wUrl)
-                
             }   // End of the for loop
-            //print("List is ", tasteList)
-               
+                 
         } catch {
             semaphore.signal()
             return
