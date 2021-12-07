@@ -46,7 +46,7 @@ struct RecordVoiceMemo: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .disableAutocorrection(true)
                         .autocapitalization(.words)
-                    
+
                     // Button to clear the text field
                     Button(action: {
                         voiceMemoTitle = ""
@@ -64,7 +64,7 @@ struct RecordVoiceMemo: View {
                      above and showVoiceMemoAddedAlert is attached to the Form below.
                      ----------------------------------------------------------------
                      */
-                    
+
                 }   // End of HStack
             }
             Section(header: Text("Select Voice Memo Category")) {
@@ -75,6 +75,7 @@ struct RecordVoiceMemo: View {
                 }
                 .pickerStyle(WheelPickerStyle())
             }
+        }//form end
             Section(header: Text("Voice Memo Duration Time")) {
                 Text(userData.voiceRecordingDuration)
             }
@@ -85,8 +86,6 @@ struct RecordVoiceMemo: View {
                     voiceRecordingMicrophoneLabel
                 }
             }
-            
-        }   // End of Form
             .font(.system(size: 14))
             .alert(isPresented: $showVoiceMemoAddedAlert, content: { voiceMemoAddedAlert })
             .navigationBarTitle(Text("Record New Voice Memo"), displayMode: .inline)
@@ -110,7 +109,6 @@ struct RecordVoiceMemo: View {
      ---------------------------
      */
     func inputDataValidated() -> Bool {
-        
         if voiceMemoTitle.isEmpty || audioFullFilename.isEmpty {
             return false
         }
@@ -258,11 +256,5 @@ struct RecordVoiceMemo: View {
         
         // Dismiss this View and go back
         presentationMode.wrappedValue.dismiss()
-    }
-}
-
-struct RecordVoiceMemo_Previews: PreviewProvider {
-    static var previews: some View {
-        RecordVoiceMemo()
     }
 }

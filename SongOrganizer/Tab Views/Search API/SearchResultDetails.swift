@@ -21,14 +21,34 @@ struct SearchResultDetails: View {
                 Text(taste.wTeaser)
             }
             Section(header: Text("Artist Wiki Page")) {
-                Text(taste.wUrl)
+                NavigationLink(destination: WebView(url: taste.wUrl)) {
+                    HStack {
+                        Image(systemName: "globe")
+                            .imageScale(.medium)
+                            .font(Font.title.weight(.regular))
+                        Text("See Artist Wiki Page")
+                            .font(.system(size: 16))
+                    }
+                    .foregroundColor(.blue)
+                    .frame(minWidth: 300, maxWidth: 500, alignment: .leading)
+                }
             }
-            Section(header: Text("Artist Name")) {
-                NavigationLink("Music Video", destination: WebView(url: "https://www.youtube.com/watch?v=i\(taste.yID)"))
+            Section(header: Text("Music Video")) {
+                NavigationLink(destination: WebView(url: "https://www.youtube.com/watch?v=\(taste.yID)")) {
+                    HStack {
+                        Image(systemName: "music.note.tv")
+                            .imageScale(.medium)
+                            .font(Font.title.weight(.regular))
+                        Text("See Artist Music Video")
+                            .font(.system(size: 16))
+                    }
+                    .foregroundColor(.blue)
+                    .frame(minWidth: 300, maxWidth: 500, alignment: .leading)
+                }
             }
         } // End Form
         .navigationBarTitle(Text("Artist Details"), displayMode: .inline)
-        .font(.system(size: 14))
+        .font(.system(size: 16))
     }
 }
 
