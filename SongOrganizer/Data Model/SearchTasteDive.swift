@@ -17,7 +17,7 @@ import SwiftUI
  */
 let myApiKey = "427840-SongOrga-77ZYQQKF"
  
-// Declare nationalParkFound as a global mutable variable accessible in all Swift files
+// Declare tasteFound as a global mutable variable accessible in all Swift files
 //var tasteStructList = [Taste]()
 var tasteList = [Taste]()
 
