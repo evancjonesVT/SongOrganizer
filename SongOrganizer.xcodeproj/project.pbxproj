@@ -28,7 +28,6 @@
 		BF3BB9832754142400A9A116 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB9822754142400A9A116 /* UtilityFunctions.swift */; };
 		BF3BB986275422D200A9A116 /* AddSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB985275422D200A9A116 /* AddSong.swift */; };
 		BF3BB9922755910500A9A116 /* TasteStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB9902755910500A9A116 /* TasteStruct.swift */; };
-		BF3BB9962755915D00A9A116 /* SearchResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB9932755915D00A9A116 /* SearchResultItem.swift */; };
 		BF3BB9982755915D00A9A116 /* SearchAPIResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB9952755915D00A9A116 /* SearchAPIResults.swift */; };
 		BF3BB99A27559EC400A9A116 /* SearchTasteDive.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB99927559EC300A9A116 /* SearchTasteDive.swift */; };
 		BF3BB99C2755AF5000A9A116 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BB99B2755AF5000A9A116 /* WebView.swift */; };
@@ -40,6 +39,8 @@
 		BF93C055275D4FF500A98CAF /* SearchDBDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93C054275D4FF500A98CAF /* SearchDBDetails.swift */; };
 		BF93C057275D500D00A98CAF /* SearchDBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93C056275D500D00A98CAF /* SearchDBItem.swift */; };
 		BF93C059275D583F00A98CAF /* SearchDBList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93C058275D583F00A98CAF /* SearchDBList.swift */; };
+		BFC6D2152760304A009EF7FD /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6D2132760304A009EF7FD /* ImagePicker.swift */; };
+		BFC6D2162760304A009EF7FD /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6D2142760304A009EF7FD /* PhotoCaptureView.swift */; };
 		BFD98E162743147100A75D21 /* SongOrganizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD98E152743147100A75D21 /* SongOrganizerApp.swift */; };
 		BFD98E182743147100A75D21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD98E172743147100A75D21 /* ContentView.swift */; };
 		BFD98E1A2743147500A75D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD98E192743147500A75D21 /* Assets.xcassets */; };
@@ -87,7 +88,6 @@
 		BF3BB98427541AA200A9A116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3BB985275422D200A9A116 /* AddSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSong.swift; sourceTree = "<group>"; };
 		BF3BB9902755910500A9A116 /* TasteStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasteStruct.swift; sourceTree = "<group>"; };
-		BF3BB9932755915D00A9A116 /* SearchResultItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultItem.swift; sourceTree = "<group>"; };
 		BF3BB9952755915D00A9A116 /* SearchAPIResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPIResults.swift; sourceTree = "<group>"; };
 		BF3BB99927559EC300A9A116 /* SearchTasteDive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTasteDive.swift; sourceTree = "<group>"; };
 		BF3BB99B2755AF5000A9A116 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -99,6 +99,8 @@
 		BF93C054275D4FF500A98CAF /* SearchDBDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDBDetails.swift; sourceTree = "<group>"; };
 		BF93C056275D500D00A98CAF /* SearchDBItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDBItem.swift; sourceTree = "<group>"; };
 		BF93C058275D583F00A98CAF /* SearchDBList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDBList.swift; sourceTree = "<group>"; };
+		BFC6D2132760304A009EF7FD /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		BFC6D2142760304A009EF7FD /* PhotoCaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
 		BFD98E122743147100A75D21 /* SongOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD98E152743147100A75D21 /* SongOrganizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongOrganizerApp.swift; sourceTree = "<group>"; };
 		BFD98E172743147100A75D21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,15 @@
 			path = AudioFiles;
 			sourceTree = "<group>";
 		};
+		BFC6D2122760304A009EF7FD /* Take or Pick Photo */ = {
+			isa = PBXGroup;
+			children = (
+				BFC6D2132760304A009EF7FD /* ImagePicker.swift */,
+				BFC6D2142760304A009EF7FD /* PhotoCaptureView.swift */,
+			);
+			path = "Take or Pick Photo";
+			sourceTree = "<group>";
+		};
 		BFD98E092743147100A75D21 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +188,7 @@
 				BFE2D21F274731230083D7E6 /* Supporting Files */,
 				BFE2D220274731430083D7E6 /* Core Data Model */,
 				BFE2D221274731720083D7E6 /* Tab Views */,
+				BFC6D2122760304A009EF7FD /* Take or Pick Photo */,
 				BFD98E192743147500A75D21 /* Assets.xcassets */,
 				BF3BB98427541AA200A9A116 /* Info.plist */,
 				BFD98E1B2743147500A75D21 /* Preview Content */,
@@ -297,7 +309,6 @@
 			children = (
 				BFE2D2362747333E0083D7E6 /* SearchAPI.swift */,
 				BF3BB9952755915D00A9A116 /* SearchAPIResults.swift */,
-				BF3BB9932755915D00A9A116 /* SearchResultItem.swift */,
 				BF75A012275ED60200663AD3 /* SearchResultDetails.swift */,
 			);
 			path = "Search API";
@@ -408,7 +419,6 @@
 				BF93C04F275D4B4F00A98CAF /* SearchAlbum.swift in Sources */,
 				BFE2D22F274732E60083D7E6 /* FavoritesDetails.swift in Sources */,
 				BFE2D23F274D59EC0083D7E6 /* MySongStruct.swift in Sources */,
-				BF3BB9962755915D00A9A116 /* SearchResultItem.swift in Sources */,
 				BF93C059275D583F00A98CAF /* SearchDBList.swift in Sources */,
 				79E14B92275C35D60005337F /* LyricsView.swift in Sources */,
 				BFE2D2352747332A0083D7E6 /* SearchDB.swift in Sources */,
@@ -420,10 +430,12 @@
 				BFD98E182743147100A75D21 /* ContentView.swift in Sources */,
 				7988E9892756846400DDBC7B /* LyricsAPI.swift in Sources */,
 				BFE2D2392747339C0083D7E6 /* AppDelegate.swift in Sources */,
+				BFC6D2152760304A009EF7FD /* ImagePicker.swift in Sources */,
 				BF3BB9832754142400A9A116 /* UtilityFunctions.swift in Sources */,
 				BFE2D247274D5C780083D7E6 /* Photo.swift in Sources */,
 				792CCAD8275EA78C00A0D773 /* UserData.swift in Sources */,
 				BFE2D245274D5C6E0083D7E6 /* Artist.swift in Sources */,
+				BFC6D2162760304A009EF7FD /* PhotoCaptureView.swift in Sources */,
 				792CCADA275EA81E00A0D773 /* VoiceMemoStruct.swift in Sources */,
 				BFE2D229274732A60083D7E6 /* Home.swift in Sources */,
 				BF93C04D275D4B4300A98CAF /* SearchSong.swift in Sources */,

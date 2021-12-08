@@ -55,7 +55,7 @@ struct FavoritesDetails: View {
                     }
                 }
                 Section(header: Text("Apple Music Link")) {
-                    Link(destination: URL(string: song.appleLink ?? "https://www.apple.com/apple-music/")!, label: {
+                    Link(destination: URL(string: song.appleLink ?? "https://www.apple.com/apple-music/") ?? URL(string:"https://www.apple.com/apple-music/")!, label: {
                         HStack {
                             Image(systemName: "globe")
                                 .imageScale(.medium)
@@ -68,7 +68,7 @@ struct FavoritesDetails: View {
                     })
                 }
                 Section(header: Text("Spotify Link")) {
-                    Link(destination: URL(string: song.spotifyLink ?? "https://www.spotify.com/us/")!, label: {
+                    Link(destination: URL(string: song.spotifyLink ?? "https://www.spotify.com/us/") ?? URL(string:"https://www.spotify.com/us/")!, label: {
                         HStack {
                             Image(systemName: "globe")
                                 .imageScale(.medium)
