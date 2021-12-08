@@ -2,9 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>SongOrganizer needs access to your photo library to choose  a photo.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Microphone is used to record your voice to create Voice Memos and to record your speech so that it can be converted to text.
+	<string>Microphone is used to record music.
 </string>
+	<key>NSCameraUsageDescription</key>
+	<string>SongOrganizer needs access to your photo library to choose  a photo.</string>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>
