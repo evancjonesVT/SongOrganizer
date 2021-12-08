@@ -19,7 +19,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
          ***************************************
          */
         createMySongsDatabase()
-        readVoiceMemosDataFile()
+        // readVoiceMemosDataFile()
         getPermissionForVoiceRecording()  
         return true
     }
