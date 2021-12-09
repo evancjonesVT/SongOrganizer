@@ -28,7 +28,6 @@ public func getAlbumCover(query1: String) {
     // authorization token expires so if the API no longer works you must get a new token here: https://developer.spotify.com/console/get-search-item/
     // Scroll to the bottom and click GET TOKEN to get your new token. Replace the old token with the new one in the format
     // Bearer "ENTER TOKEN HERE"
-    
     let headers = [
         "accept": "application/json",
         "content-type": "application/json",

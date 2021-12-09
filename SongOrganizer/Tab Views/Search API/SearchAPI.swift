@@ -113,7 +113,7 @@ struct SearchAPI: View {
         let songNameTrimmed = searchFieldValue.trimmingCharacters(in: .whitespacesAndNewlines)
         
         // public function getApiDataByNationalParkName is given in SearchByNameApiData.swift
-        getApiDataBySongName(artistName: songNameTrimmed)
+        getApiDataByArtistName(artistName: songNameTrimmed)
     }
     
     /*

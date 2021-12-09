@@ -40,9 +40,9 @@ struct RecordVoiceMemo: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Voice Memo Title")) {
+            Section(header: Text("Audio Recording Title")) {
                 HStack {
-                    TextField("Enter voice memo title", text: $voiceMemoTitle)
+                    TextField("Enter audio recording title", text: $voiceMemoTitle)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .disableAutocorrection(true)
                         .autocapitalization(.words)
@@ -67,7 +67,7 @@ struct RecordVoiceMemo: View {
 
                 }   // End of HStack
             }
-            Section(header: Text("Select Voice Memo Category")) {
+            Section(header: Text("Select Audio Recording Category")) {
                 Picker("", selection: $selectedIndex) {
                     ForEach(0 ..< voiceMemoCategories.count, id: \.self) {
                         Text(voiceMemoCategories[$0])
@@ -76,10 +76,10 @@ struct RecordVoiceMemo: View {
                 .pickerStyle(WheelPickerStyle())
             }
         }//form end
-            Section(header: Text("Voice Memo Duration Time")) {
+            Section(header: Text("Audio Duration Time")) {
                 Text(userData.voiceRecordingDuration)
             }
-            Section(header: Text("Voice Recording")) {
+            Section(header: Text("Audio Recording")) {
                 Button(action: {
                     voiceRecordingMicrophoneTapped()
                 }) {
@@ -88,7 +88,7 @@ struct RecordVoiceMemo: View {
             }
             .font(.system(size: 14))
             .alert(isPresented: $showVoiceMemoAddedAlert, content: { voiceMemoAddedAlert })
-            .navigationBarTitle(Text("Record New Voice Memo"), displayMode: .inline)
+            .navigationBarTitle(Text("Record New Audio Recording"), displayMode: .inline)
             // Place the Add (+) button on right of the navigation bar
             .navigationBarItems(trailing:
                 Button(action: {
@@ -123,7 +123,7 @@ struct RecordVoiceMemo: View {
      */
     var missingInputDataAlert: Alert {
         Alert(title: Text("Missing Title and / or Recording!"),
-              message: Text("Please enter a title and record your new voice memo!"),
+              message: Text("Please enter a title and record your new audio recording!"),
               dismissButton: .default(Text("OK")) )
         /*
         Tapping OK resets @State var showMissingInputDataAlert to false.
@@ -136,8 +136,8 @@ struct RecordVoiceMemo: View {
      --------------------------------
      */
     var voiceMemoAddedAlert: Alert {
-        Alert(title: Text("New Voice Memo Added!"),
-              message: Text("New voice memo is added to your voice memos list."),
+        Alert(title: Text("New Audio Recording Added!"),
+              message: Text("New audio recording is added to your recordings list."),
               dismissButton: .default(Text("OK")) {
                 
                 // Dismiss this Modal View and go back to the previous view in the navigation hierarchy
