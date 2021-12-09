@@ -25,7 +25,7 @@ var tasteFound = Taste(name: "", type: "", wTeaser: "", wUrl: "", yID: "", yUrl:
  
 fileprivate var previousTaste = ""
 
-public func getApiDataBySongName(artistName: String) {
+public func getApiDataByArtistName(artistName: String) {
    
     // Avoid executing this function if already done for the same song name
     // replace occurences of spaces with %20 for artist name
@@ -197,10 +197,6 @@ public func getApiDataBySongName(artistName: String) {
                 semaphore.signal()
                 return
             }
-            /*
-             API returns the following for invalid national park name
-             {"total":"0","data":[],"limit":"50","start":"1"}
-             */
             if dataJsonArray.isEmpty {
                 semaphore.signal()
                 return
