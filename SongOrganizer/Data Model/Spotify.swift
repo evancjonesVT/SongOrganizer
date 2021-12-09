@@ -25,11 +25,15 @@ public func getAlbumCover(query1: String) {
     *******************************
     */
     
+    // authorization token expires so if the API no longer works you must get a new token here: https://developer.spotify.com/console/get-search-item/
+    // Scroll to the bottom and click GET TOKEN to get your new token. Replace the old token with the new one in the format
+    // Bearer "ENTER TOKEN HERE"
+    
     let headers = [
         "accept": "application/json",
         "content-type": "application/json",
-        "authorization": "Bearer BQDgo8rZh3-Rbfu_4N0lxmUnwX-rZ6Oy-cRdDm8z6jCaZQKqwPS_04KerBcuM0PYhXabDMUsphAAnRHLMImMvVsU2nmhKcntls977mm65puqndjzhTr2yd8-UgVL3RP__BAr9jgMdNMNPTM",
-        "host": "https://api.spotify.com"
+        "authorization": "Bearer BQBNUeGiyMPEnGoN8MSLkkRHVej-GIP0lSVXsSnqWflD0BpV3qhez1Cy1ANhVvktuH4oI-2xuE7q2CkNnI3VCnOJiC1S4irKqODKe9CbsGrM17azqOYiTXK5qWKwLE7qb8pB8RsASwytwA0",
+        "host": "api.spotify.com"
     ]
 
     let request = NSMutableURLRequest(url: NSURL(string: apiUrl)! as URL,
@@ -95,7 +99,7 @@ public func getAlbumCover(query1: String) {
              */
             let jsonResponse = try JSONSerialization.jsonObject(with: jsonDataFromApi,
                                options: JSONSerialization.ReadingOptions.mutableContainers)
-            print(jsonResponse)
+            //print(jsonResponse)
             
             if let jsonArray = jsonResponse as? [String: Any] {
                 //print(jsonArray)

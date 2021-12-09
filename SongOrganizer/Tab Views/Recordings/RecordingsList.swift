@@ -28,7 +28,7 @@ struct RecordingsList: View {
                 }
                 
             } // End of List
-            .navigationBarTitle(Text("Voice Memos"), displayMode: .inline)
+            .navigationBarTitle(Text("Audio Recordings"), displayMode: .inline)
             
             // Place the Edit button on left and Add (+) button on right of the navigation bar
             .navigationBarItems(leading: EditButton(), trailing:

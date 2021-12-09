@@ -17,10 +17,10 @@ struct RecordingsDetails: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Voice Memo Title")) {
+            Section(header: Text("Audio Title")) {
                 Text(voiceMemo.title)
             }
-            Section(header: Text("Voice Memo Category")) {
+            Section(header: Text("Audio Category")) {
                 HStack {
                     Image(voiceMemo.category)
                         .resizable()
@@ -29,7 +29,7 @@ struct RecordingsDetails: View {
                     Text(voiceMemo.category)
                 }
             }
-            Section(header: Text("Play Voice Memo")) {
+            Section(header: Text("Play Audio")) {
                 Button(action: {
                     if audioPlayer.isPlaying {
                         audioPlayer.pauseAudioPlayer()
@@ -42,15 +42,15 @@ struct RecordingsDetails: View {
                         .font(Font.title.weight(.regular))
                     }
             }
-            Section(header: Text("Voice Memo Duration Time")) {
+            Section(header: Text("Audio Duration Time")) {
                 Text(voiceMemo.duration)
             }
-            Section(header: Text("Voice Memo Date and Time")) {
+            Section(header: Text("Audio Date and Time")) {
                 Text(voiceMemo.dateTime)
             }
         }   // End of Form
         .font(.system(size: 14))
-        .navigationBarTitle(Text("Voice Memo Details"), displayMode: .inline)
+        .navigationBarTitle(Text("Audio Recording Details"), displayMode: .inline)
         .onAppear() {
             createPlayer()
         }

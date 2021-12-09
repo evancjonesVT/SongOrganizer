@@ -69,7 +69,7 @@ struct Home: View {
                             Image("TasteDiveImage")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(height: 60)
+                                .frame(height: 40)
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
                         }
                     }
@@ -81,11 +81,22 @@ struct Home: View {
                             Image("LyricsImage")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(height: 60)
+                                .frame(height: 40)
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
                         }
                     }
                     .padding(.bottom, 20)
+                    
+                    // Show spotify provider's website in default web browser.
+                    Link(destination: URL(string: "https://developer.spotify.com/documentation/web-api/")!) {
+                        HStack {
+                            Image("SpotifyApiLogo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 40)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                        }
+                    }
                     
                 } // end of VStack.
             } // end of ScrollView.
